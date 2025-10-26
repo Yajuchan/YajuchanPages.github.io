@@ -110,7 +110,7 @@
                     これはGameProfile型のオブジェクトを引数にとり, 対応するServerPlayerにコマンド権限を付与するメソッドである. したがって実装の流れとしては以下のようになる. 
                     <ul>
                         <li>com.mojang.authlib.GameProfile, net.minecraft.server.level.ServerPlayer, net.minecraft.server.players.PlayerListをimportし, 
-                            public static void setPlayerPermissionLevel(ServerPlayer player) という名前でメソッドを定義する(この名前はわかりやすければなんでもいい). </li>
+                            voidを返り値(つまり何も返さない)としてsetPlayerPermissionLevel(ServerPlayer player) という名前でメソッドを定義する(この名前はわかりやすければなんでもいい). </li>
                         <li>PlayerList型のオブジェクトをplayerのメンバ変数であるserverのメソッドgetPlayerListで生成する. </li>
                         <li>GameProfile型のオブジェクトをplayerのメソッドgetGameProfileで生成する. </li>
                         <li>生成したPlayerList型オブジェクトのopメソッドにGameProfileオブジェクトを渡し, コマンド権限を付与する. </li>
