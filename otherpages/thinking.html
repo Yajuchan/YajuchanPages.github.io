@@ -386,7 +386,9 @@
                 $ mkdir mount_dir <br>
                 $ sudo mount -t iso9660 ./hoge.iso ./mount_dir/<br>
                 というコマンドでカレントディレクトリの下にあるmount_dir/にisoファイルがマウントされる. なおISOファイルではなくMDFファイルに焼いている場合も, 
-                実態は同じものなのでhoge.isoをhoge.mdfに変更するだけで動作するはずである. </li>
+                実態は同じものなのでhoge.isoをhoge.mdfに変更するだけで動作するはずである. ちなみにmountの解除は<br>
+                $ sudo umount ./mount_dir/<br>
+                で行う. </li>
             <li>マウントしたらmount_dir/内のインストール用実行ファイル(たいていはsetup.exeとか)をwineに渡して実行する. 果たしてうまくいくのか...?</li>
             <li>以下はいくつかの実験結果である. 
                 <ul>
